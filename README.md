@@ -49,12 +49,12 @@ Some of features include:
 Ver 1
 -------
 1. This is introduction on how to build the HTML blog using python
-2. Read the introduction article at ?
+2. Download at [ver1](https://github.com/dvader2021/KISS/tree/main/ver_1)
 
 Ver 2
 -------
 1. This is expansion of introduction on how to build the HTML blog using python - inludes a table of contents
-2. Read the introduction article at ?
+2. Download at [ver2](https://github.com/dvader2021/KISS/tree/main/ver_2)
 
 Ver 3 or this version
 ---------------------
