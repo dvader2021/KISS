@@ -44,6 +44,7 @@ Some of features include:
 6. Themes allow full customization of the display
 7. Google analytics included .. set google analytics id in the config file
 8. Generate related articles using TFID and Cosine-similarity
+9. Added interactivity with AWS API and Lambda
 
 
 Ver 1
@@ -76,7 +77,8 @@ quickly as possible.
 > - published: the last published date
 > - copyright: specific copyright language to be included in the footer
 > - contact (name, email, twitter): contact info specific to the site  
-> - google_analytics: the google analytics id
+> - google_analytics: specify the google analytics id .. otherwise leave it blank
+> - aws_api: specify the aWS api .. otherwise leave it blank
 
 > defaults
 > - show_featured: setting it to **TRUE** will show featured posts on the home page requires at least one post to be marked with status = featured. Defaults to FALSE
@@ -94,6 +96,7 @@ quickly as possible.
 > settings
 > - show_summary: ability to print summary on console during the build process
 > - file_type: the suffix for files. not used currently. set to .HTML
+
 
 > template_name {DO NOT CHANGE ANYTHING IN THIS SECTION}
 > - start_page: set to "index.html"

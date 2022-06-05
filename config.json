@@ -2,10 +2,10 @@
     "site": {
             "title": "KISS",
             "description": "simple static site generator",
-            "keywords": "static web site python jinja2 markdown",
+            "keywords": "static web site python jinja2 markdown aws lambda",
             "url": "https://github.com/dvader2021/kiss",
-            "ver": "3.00",
-            "published": "May 2022",
+            "ver": "3.10",
+            "published": "Jun 2022",
             "copyright": "all rights reserved. 2022-2023",
             "license": "see License.MD",
             "contact": { 
@@ -13,7 +13,8 @@
                     "email": "subu@lumosai.org",
                     "twitter": "subusangam"
             },
-            "google_analytics": ""
+            "google_analytics": "",
+            "aws_api": ""
 
     },
    
@@ -30,11 +31,13 @@
             "delete_output_folder": true,
             "file_ext":"md",
             "blank_val":""
+            
     },
 
     "settings": {
         "show_summary": true,
         "file_type": ".html"
+        
     },
 
     "template_name":{

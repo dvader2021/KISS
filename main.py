@@ -54,6 +54,7 @@ def main():
     all_data =  db.read_data(config, pwatch)
     # now include the site data 
     all_data['site'] =  config.site #TBD is there a better way?
+
     
     # call blogger to create the final file
     blogger.start(all_data, config, pwatch )

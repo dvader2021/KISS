@@ -11,7 +11,7 @@
   <meta name="keywords" content="{{ pageContent.site.keywords }}">
   <meta name="author" content="{{ pageContent.site.contact.name }}">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -73,7 +73,14 @@
 
 </head>
 
-{% include 'inc-google-analytics.html' %}
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ pageContent.site.google_analytics }}"></script>
+<script>
+  window.pageContentLayer = window.pageContentLayer || [];
+  function gtag() { window.pageContentLayer.push(arguments); }
+  gtag('js', new Date());
+  gtag('config', '{{ pageContent.site.google_analytics }}');
+</script>
 
 <body>
 

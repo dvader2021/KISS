@@ -54,12 +54,12 @@ except:
 try:
     related_article_count = int(data["defaults"]["related_article_count"])
 except:
-    related_article_count = 4
+    related_article_count = 2
 
 try:
     paginate_post_count = int(data["defaults"]["paginate_post_count"])
 except:
-    paginate_post_count = 3
+    paginate_post_count = 10
 
 
 
@@ -87,6 +87,7 @@ try:
     file_type = data["settings"]["file_type"]
 except:
     file_type = ".html"
+
 
 try:
     start_page = data["template_name"]["start_page"]

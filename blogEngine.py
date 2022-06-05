@@ -48,6 +48,15 @@ def copy_all(src_folder, dest_folder):
             shutil.copy(src_file, dst_dir)
 
 
+# copy all files related to the theme
+def copy_theme_assets(ref_folder, src_folder, output_folder):
+
+    src_folder = src_folder  + "/"+ get_asset_folder_name(ref_folder)
+    dest_folder = output_folder  + get_asset_folder_name(ref_folder)
+    print(src_folder)
+    print(dest_folder)
+    copy_all(src_folder, dest_folder)
+
 # copy all files from a speficied to another folder
 def copy_assets(src_folder, output_folder):
 
@@ -320,10 +329,12 @@ def start(all_data, config, pwatch):
     create_tag_pages(all_data, page_template, config.output_folder,  config.paginate_post_count)
 
     # 8 - copy assets
-    pwatch.summary_write("finally copying all assets", config.show_summary)
+    pwatch.summary_write("copying all assets", config.show_summary)
     copy_assets(config.static_folder, config.output_folder)
     
-
+    # 9 - copy theme assets
+    pwatch.summary_write("finally copying assets related to theme", config.show_summary)
+    copy_theme_assets(config.static_folder, config.themes_folder, config.output_folder)
 
 
 #generic function to create a html page using a template
