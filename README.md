@@ -3,11 +3,11 @@
 Introduction
 -----------
 
-KISS is a static site generator that requires no database or server-side logic. The project is maintained by Subu Sangameswar (@subusangam). It started out as a fun learning project and has evolved as a useful tool. 
-KISS stands for >Keep it simple senorita
+KISS is a static site generator that requires no database or server-side logic. The project is maintained by Subu Sangameswar (@subusangam). It started out as a fun learning project and has evolved as a useful tool.   
+KISS stands for **Keep it simple senorita**  
 
->This is ver 3.00 released May 2022
->more updates or enhancements planned for future releases
+>This is ver 3.20 released Jun 2022
+>No more updates or enhancements planned
 >see live version at [chasing a rainbow](https://www.chasingarainbow.org)
 
 Written in Python 3.6
@@ -44,18 +44,21 @@ Some of features include:
 6. Themes allow full customization of the display
 7. Google analytics included .. set google analytics id in the config file
 8. Generate related articles using TFID and Cosine-similarity
-9. Added interactivity with AWS API and Lambda
+9. Interactivity with AWS API and Lambda can be added if needed
 
 
 Ver 1
 -------
-1. This is introduction on how to build the HTML blog using python
-2. Download at [ver1](https://github.com/dvader2021/KISS/tree/main/ver_1)
+1. This is an introduction on how to build the HTML blog using python
+2. Simple one page blog derived from a content in a markdown file
+3. Download at [ver1](https://github.com/dvader2021/KISS/tree/main/ver_1)
 
 Ver 2
 -------
-1. This is expansion of introduction on how to build the HTML blog using python - inludes a table of contents
-2. Download at [ver2](https://github.com/dvader2021/KISS/tree/main/ver_2)
+1. This is an expansion of the introduction on how to build the HTML blog using python - inludes a table of contents
+2. Expansion includes multiple pages derived from markdown and a table of contents page
+3. Download at [ver2](https://github.com/dvader2021/KISS/tree/main/ver_2)
+
 
 Ver 3 or this version
 ---------------------
@@ -129,6 +132,19 @@ Code
 The data is combined into a large JSON file that the jinja parser can use to fill in the templates
 - more details TBD
 
+AWS
+----------
+
+- if AWS is the chosen option, then provide the API in the config file
+- Lambda and API Gateway is used for "claps" count 
+- The lambda receives 
+{title_str: title of the post}
+and returns with
+{title_str: title of the post,
+clap_int: count of total claps}
+- within the lambda function, the following functionality happens
+- search for a record with the title. if found, get the count and add 1 to it. if not found, insert the title and count of 1 .. response is sent back with the title and updated count
+
 Themes
 ----------
 - Includes one theme 
@@ -144,6 +160,8 @@ Themes
 - inc-article-list.html
 - inc-article-related.html
 - inc-pagination.html
+- inc-google-analytics.html
+- inc-aws-connectivity.html
 
 
 FAQ

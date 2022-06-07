@@ -4,7 +4,7 @@
             "description": "simple static site generator",
             "keywords": "static web site python jinja2 markdown aws lambda",
             "url": "https://github.com/dvader2021/kiss",
-            "ver": "3.10",
+            "ver": "3.20",
             "published": "Jun 2022",
             "copyright": "all rights reserved. 2022-2023",
             "license": "see License.MD",
